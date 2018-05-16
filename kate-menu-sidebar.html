@@ -1,0 +1,33 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="kate-menu-sidebar-style.html">
+<link rel="import" href="../kate-menu-sidebar-item/kate-menu-sidebar-item.html">
+
+<dom-module id="kate-menu-sidebar">
+  <template>
+    <style include="kate-menu-sidebar-style"></style>
+    <div class$="ams-container [[widthSpace]]">
+      <div class$="menu-container [[widthSpace]]">
+        <slot name="menu"> 
+        </slot>
+      </div>
+      <div class$="ams-bar-container [[widthSpace]]">
+        <img src="[[logoURL]]" class="logoImage">
+        <ul>
+          <template is="dom-repeat" items="[[items]]">
+            <li>
+              <kate-menu-sidebar-item 
+                tooltip="[[item.tooltip]]"
+                icon="[[item.icon]]"
+                title="[[icon.title]]"
+                status="[[status]]"
+                >
+              </kate-menu-sidebar-item>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </div>    
+  </template>
+
+  <script type="text/javascript" src="kate-menu-sidebar.js"></script>
+</dom-module>

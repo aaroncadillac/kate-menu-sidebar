@@ -1,0 +1,54 @@
+<dom-module id="kate-menu-sidebar-style">
+  <template>
+    <style>
+      .ams-container {
+        width: 300px;
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        height: 100vh;
+        transition: left 0.4s;
+      }
+      .menu-container {
+        background-color: blue;
+      }
+      .menu-container, .ams-bar-container {
+        height: 100%;
+        overflow-y: auto;
+      }
+      .menu-container.normal {
+        width: 240px;
+      }
+      .menu-container.lighter {
+        width: 250px;
+      }
+      .menu-container.biggest {
+        width: 200px;
+      }
+      .ams-container.normal {
+        left: -240px;
+      }
+      .ams-container.lighter {
+        left: -250px;
+      }
+      .ams-container.biggest {
+        left: -200px;
+      }
+      .ams-bar-container {
+        background-color: #e5e5e5;
+        box-shadow: 1px 0 3px 0 #252525; 
+      }
+      .ams-bar-container.normal {
+        width: 60px;
+      }
+      .ams-bar-container.lighter {
+        width: 50px;
+      }
+      .ams-bar-container.biggest {
+        width: 100px;
+      }
+    </style>
+  </template>
+</dom-module>
