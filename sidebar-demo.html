@@ -1,0 +1,45 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+<link rel="import" href="kate-menu-sidebar.html">
+
+<dom-module id="sidebar-demo">
+  <template>
+    <kate-menu-sidebar items="[[items]]"></kate-menu-sidebar>
+  </template>
+  <script>
+    class SidebarDemo extends Polymer.Element {
+      static get is() { return 'sidebar-demo'; }
+      static get properties() {
+        return {
+          items: {
+            type: Array,
+             value: () => ([
+              {
+                tooltip: 'item-with-title',
+                icon: 'home',
+                title: 'title',
+                ripple: true
+              },
+              {
+                tooltip: 'person (without-title)',
+                icon: 'accessibility',
+                ripple: true
+              },
+              {
+                tooltip: 'menu (without-ripple)',
+                icon: 'apps'
+              },
+              {
+                tooltip: 'android',
+                icon: 'android',
+                ripple: true,
+              }
+            ])
+          }
+        };
+      }
+    }
+
+    window.customElements.define(SidebarDemo.is, SidebarDemo);
+  </script>
+</dom-module>
