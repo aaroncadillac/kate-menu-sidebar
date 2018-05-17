@@ -5,6 +5,10 @@ class KateMenuSidebar extends Polymer.Element {
       widthSpace: {
         type: String,
         value: 'normal'
+      },
+      items: {
+        type: Array,
+        value: []
       }
     };
   }

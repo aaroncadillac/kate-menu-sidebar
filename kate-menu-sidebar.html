@@ -1,6 +1,6 @@
 <link rel="import" href="../polymer/polymer-element.html">
-<link rel="import" href="kate-menu-sidebar-style.html">
 <link rel="import" href="../kate-menu-sidebar-item/kate-menu-sidebar-item.html">
+<link rel="import" href="kate-menu-sidebar-style.html">
 
 <dom-module id="kate-menu-sidebar">
   <template>
@@ -12,15 +12,14 @@
       </div>
       <div class$="ams-bar-container [[widthSpace]]">
         <img src="[[logoURL]]" class="logoImage">
-        <ul>
+        <ul class="list-items-menu-sidebar">
           <template is="dom-repeat" items="[[items]]">
             <li>
               <kate-menu-sidebar-item 
                 tooltip="[[item.tooltip]]"
                 icon="[[item.icon]]"
-                title="[[icon.title]]"
-                status="[[status]]"
-                >
+                title="[[item.title]]"
+                ripple="[[item.ripple]]">
               </kate-menu-sidebar-item>
             </li>
           </template>

@@ -3,7 +3,8 @@
   "description": "dynamic material sidebar",
   "main": "kate-menu-sidebar.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.0.0"
+    "polymer": "Polymer/polymer#^2.0.0",
+    "kate-menu-sidebar-item": "https://github.com/aaroncadillac/kate-menu-sidebar-item.git#develop"
   },
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
